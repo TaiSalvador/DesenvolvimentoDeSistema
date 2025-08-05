@@ -1,5 +1,5 @@
 # Desenvolvimento de Sistemas - SENAI (2025)
-Este repositório reúne as atividades e exercícios desenvolvidos ao longo do curso técnico de Desenvolvimento de Sistemas no SENAI, com início em 2025. Durante o curso, foram abordados diversos temas essenciais para a formação de um profissional da área de tecnologia, incluindo (
+Este repositório reúne as atividades e exercícios desenvolvidos ao longo do curso técnico de Desenvolvimento de Sistemas no SENAI, com início em 2025. Durante o curso, foram abordados diversos temas essenciais para a formação de um profissional da área de tecnologia, incluindo 
 
 Lógica de Programação;
 
