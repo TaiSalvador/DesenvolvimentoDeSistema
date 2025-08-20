@@ -42,7 +42,7 @@ public class Exercicio07 {
 
         System.out.println(modeloMaiorDistancia);
 
-       
+
     }
 
 }
