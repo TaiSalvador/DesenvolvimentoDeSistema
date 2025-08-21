@@ -11,7 +11,7 @@ public class Contribuinte {
     }
 
     public double calcularAliquota() {
-        double aliquota;
+        double aliquota = 0;
         if (rendaAnual <= 0){
             aliquota  = 0.0;
         }else if (rendaAnual > 4000 && rendaAnual < 9000) {
@@ -20,13 +20,13 @@ public class Contribuinte {
             aliquota = 0.15;
         } else if (rendaAnual > 25000 && rendaAnual < 35000) {
             aliquota = 0.275;
-        } else{
+        } else if(rendaAnual > 35000){
             aliquota = 0.30;
         }
         return aliquota;
     }
 
-    public double calcularimposta() {
+    public double calcularimposto() {
         return rendaAnual * calcularAliquota();
     }
 
@@ -47,7 +47,11 @@ public class Contribuinte {
     }
 
     public void setUf(String uf) {
-        this.uf = uf;
+       if (uf == null || uf.isBlank()) {
+           System.out.println("Erro, uf inválido");
+       } else {
+           this.uf = uf;
+       }
     }
 
     public String getCpf() {
@@ -55,7 +59,11 @@ public class Contribuinte {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
+       if (cpf == null || cpf.isBlank()) {
+           System.out.println("Erro, cpf inválido");
+       } else {
+           this.cpf = cpf;
+       }
     }
 
     public String getNome() {
@@ -63,7 +71,11 @@ public class Contribuinte {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome == null || nome.isBlank()) {
+            System.out.println("Erro, nome inválido");
+        } else {
+            this.nome = nome;
+        }
     }
 
     private double rendaAnual;
