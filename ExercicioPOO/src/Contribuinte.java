@@ -2,6 +2,7 @@ public class Contribuinte {
     private String nome;
     private  String  cpf;
     private String uf;
+    private double rendaAnual;
 
     public Contribuinte(String nome, String cpf, String uf, double rendaAnual) {
         setNome(nome);
@@ -10,20 +11,18 @@ public class Contribuinte {
         setRendaAnual(rendaAnual);
     }
 
-    public double calcularAliquota() {
-        double aliquota = 0;
-        if (rendaAnual <= 0){
-            aliquota  = 0.0;
-        }else if (rendaAnual > 4000 && rendaAnual < 9000) {
-            aliquota = 0.058;
-        }else if (rendaAnual > 9000 && rendaAnual < 25000){
-            aliquota = 0.15;
-        } else if (rendaAnual > 25000 && rendaAnual < 35000) {
-            aliquota = 0.275;
-        } else if(rendaAnual > 35000){
-            aliquota = 0.30;
+    private double calcularAliquota() {
+        if (rendaAnual <=4000){
+            return  0.0;
+        }else if (rendaAnual <= 9000) {
+            return  0.058;
+        }else if (rendaAnual <= 25000){
+            return  0.15;
+        } else if (rendaAnual <= 35000) {
+            return  0.275;
+        } else{
+            return  0.30;
         }
-        return aliquota;
     }
 
     public double calcularimposto() {
@@ -47,7 +46,7 @@ public class Contribuinte {
     }
 
     public void setUf(String uf) {
-       if (uf == null || uf.isBlank()) {
+       if (uf == null || uf.length() != 2) {
            System.out.println("Erro, uf inválido");
        } else {
            this.uf = uf;
@@ -59,7 +58,7 @@ public class Contribuinte {
     }
 
     public void setCpf(String cpf) {
-       if (cpf == null || cpf.isBlank()) {
+       if (cpf == null || cpf.length() != 14) {
            System.out.println("Erro, cpf inválido");
        } else {
            this.cpf = cpf;
@@ -78,6 +77,6 @@ public class Contribuinte {
         }
     }
 
-    private double rendaAnual;
+
 }
 

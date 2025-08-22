@@ -22,7 +22,7 @@ public class Exercicio08 {
 
         double soma = 0;
          for (int i = 0; i < vetor.length; i++) {
-             soma = soma + vetor[i].calcularimposto();
+             soma  =+ vetor[i].calcularimposto();
          }
         System.out.println("O total de imposto pago pelos 5 contribuintes é: " + soma);
     }
