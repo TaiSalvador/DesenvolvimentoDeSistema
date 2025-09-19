@@ -3,8 +3,8 @@ public class Exercicio02 {
 
         Floricultura f1 = new Floricultura("Jasmim", 2.55,"João", true);
         Floricultura f2 = new Floricultura("Tulipia", 5.99,"Jessica", false);
-        Floricultura f3 = new Floricultura("Rosa", 10.99, "Tainá", true);
-        Floricultura f4 = new Floricultura("Orquidea", 15.99,"Thomas", true);
+        Floricultura f3 = new Floricultura("Rosa", 10.99, "Tainá", false);
+        Floricultura f4 = new Floricultura("Orquidea", 15.99,"Thomas", false);
 
         ListaFloricultura l1 = new ListaFloricultura();
 
@@ -14,6 +14,8 @@ public class Exercicio02 {
         l1.adicionarFlor(f4);
 
         System.out.println(l1.obterListaFlores());
+        System.out.println(l1.obterFlorMaisCara());
+        System.out.println(l1.obterReceitaPresenteOuNao());
 
     }
 }

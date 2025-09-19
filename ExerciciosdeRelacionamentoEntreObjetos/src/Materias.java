@@ -9,6 +9,13 @@ public class Materias {
         setQtdEstoque(qtdEstoque);
     }
 
+    public void adicionarMaterialNoEstoque(String nomeMaterial, int quantidade) {
+        if(quantidade <= 0){
+            throw new IllegalArgumentException("A quantidade adicionada não pode ser zero");
+        }
+        this.qtdEstoque += quantidade;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -39,5 +46,10 @@ public class Materias {
 
     public void setQtdEstoque(int qtdEstoque) {
         this.qtdEstoque = qtdEstoque;
+    }
+
+    @Override
+    public String toString() {
+        return "Materias: " + "nome = " + nome +  ", preco = " + preco + ", qtdEstoque = " + qtdEstoque + '\n';
     }
 }

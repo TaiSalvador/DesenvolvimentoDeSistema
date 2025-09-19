@@ -12,5 +12,8 @@ public class Exercicio03 {
         l1.adicionarMaterias(m3);
         l1.adicionarMaterias(m4);
 
+        System.out.println(l1.ObterListaMateriais());
+        System.out.println(l1.adicionarMaterialNoEstoque("Madeira",5));
+
     }
 }

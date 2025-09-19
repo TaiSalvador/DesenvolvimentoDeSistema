@@ -15,7 +15,7 @@ public class Floricultura {
     }
 
     public void setNome(String nome) {
-        if (nome == null) {
+        if (nome == null || nome.isBlank()) {
             throw new IllegalArgumentException("Você deve informar o nome da flor");
         } else {
             this.nome = nome;
@@ -27,7 +27,7 @@ public class Floricultura {
     }
 
     public void setPreco(double preco) {
-        if (preco < 0) {
+        if (preco <= 0) {
             throw new IllegalArgumentException("A flor não pode custar menos de zero reais");
         } else {
             this.preco = preco;
@@ -39,7 +39,7 @@ public class Floricultura {
     }
 
     public void setCliente(String cliente) {
-        if(cliente == null) {
+        if(cliente == null || cliente.isBlank()) {
             throw new IllegalArgumentException("Você deve informar o nome do cliente");
         } else {
             this.cliente = cliente;
