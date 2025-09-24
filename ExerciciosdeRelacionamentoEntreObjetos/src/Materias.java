@@ -9,11 +9,24 @@ public class Materias {
         setQtdEstoque(qtdEstoque);
     }
 
-    public void adicionarMaterialNoEstoque(String nomeMaterial, int quantidade) {
+    public void adicionarMaterialNoEstoque (int quantidade) {
         if(quantidade <= 0){
             throw new IllegalArgumentException("A quantidade adicionada não pode ser zero");
         }
         this.qtdEstoque += quantidade;
+    }
+
+    public void vender (int quantidade) {
+        if (quantidade > qtdEstoque) {
+            throw new IllegalArgumentException("Não é possível realizar a venda de mais produtos que existem no estoque");
+        }
+        this.qtdEstoque -= quantidade;
+    }
+    public void promocao (double desconto) {
+        if (desconto > 0.99) {
+            throw new IllegalArgumentException("desconto não compativél com o preço do produto");
+        }
+        this.preco = preco - (desconto * preco);
     }
 
     public String getNome() {

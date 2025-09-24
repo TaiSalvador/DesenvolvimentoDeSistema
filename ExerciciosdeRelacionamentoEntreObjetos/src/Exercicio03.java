@@ -13,7 +13,12 @@ public class Exercicio03 {
         l1.adicionarMaterias(m4);
 
         System.out.println(l1.ObterListaMateriais());
-        System.out.println(l1.adicionarMaterialNoEstoque("Madeira",5));
-
+        System.out.println(l1.adicionarMaterialNoEstoque("Madeira", 5));
+        System.out.println(l1.ObterListaMateriais());
+        System.out.println(l1.venderMaterial("Ferro", 68));
+        System.out.println(l1.ObterListaMateriais());
+        System.out.println(l1.promocaoMaterial("Areia", 0.50));
+        System.out.println(l1.ObterListaMateriais());
+        System.out.println(l1.materialMaisCaro());
     }
 }
