@@ -23,6 +23,8 @@ public class ContaBancaria {
     }
 
     public void setSaldo(double saldo) {
-        if (saldo  )
+        if (saldo  <= 0) {
+
+        }
     }
 }

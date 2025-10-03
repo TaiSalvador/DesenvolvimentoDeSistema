@@ -51,7 +51,7 @@ public class ListaMaterias {
 
         for (Materias a : listaMateriais) {
             if (a.getPreco() > materialCaro) {
-                materialCaro = a.getPreco();;
+                materialCaro = a.getPreco();
                 Material = a;
             }
         }
